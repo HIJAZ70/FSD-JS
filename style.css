@@ -1,0 +1,11 @@
+.selected{
+    border:hsl(157, 89%, 22%) solid 5px;
+ }
+ .hidden{
+    visibility: hidden;
+    display: none;
+ }
+.toggle{
+    visibility: visible;
+    display: block;
+}

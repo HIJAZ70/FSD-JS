@@ -1,6 +1,6 @@
 // loops
 
-const { use } = require("react");
+// const { use } = require("react");
 
 // for loop
 // for(let a =1; a <= 5; a++){
@@ -109,13 +109,13 @@ const { use } = require("react");
 // console.log('sum=',sum);
 
 // Object
-let user ={
-  name: 'manu',
-  age: 18,
-  education:'+2',
-  job: 'nill'
+// let user ={
+//   name: 'manu',
+//   age: 18,
+//   education:'+2',
+//   job: 'nill'
 
-}
+// }
 // console.log(user.age);
 // console.log(user['education']);
 
@@ -136,7 +136,7 @@ let user ={
 // console.log(value)
 // console.log(entries)
 
-for( let key in user){
-  console.log(user[key]);
+// for( let key in user){
+//   console.log(user[key]);
   
-}
+// }
