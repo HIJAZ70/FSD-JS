@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!-- <button id="addName">Add Name</button> -->
+    <!-- <script>
+
+        // sessionStorage.setItem("session","FSD E86");
+        const aBc = {
+            id : 1,
+            name:'hijas'
+        }
+        localStorage.setItem("aBc",JSON.stringify(aBc));
+        const adName = document.querySelector('#addName')
+        localStorage.setItem('name','hijas')
+        const usersession =sessionStorage.getItem('session') || undefined;
+        console.log(usersession);
+        adName.addEventListener('click',(e)=>{
+            sessionStorage.setItem("session","FSD E86")
+        })
+        
+        localStorage.setItem('name','hijaz')
+        const userName = localStorage.getItem('name')
+        // localStorage.removeItem('name')
+        localStorage.clear()
+        console.log("This user name from the localstorege:",userName);
+
+
+        
+    </script> -->
+    <!-- <script>
+              const  custam = {
+            name: "Varun",
+            showName:()=>{
+                console.log("hello", this.name)
+            }
+        }
+
+        // window
+
+ custam.showName();
+//         const  custam = {
+//             name: "Varun",
+//             showName(){
+//                 console.log("hello", this.name)
+//             }
+//         }
+//         // custam.showName();
+//         //  const stdFn = custam.showName
+//         //fix
+//         // const stdFn = custam.showName.bind(custam)
+//         // stdFn()
+
+//          function greet (city){
+//             console.log(`hi,am ${this.name} form${city} `);
+
+            
+
+//          }
+//          const user ={
+//             name:"hIJAZZ"
+//          }
+// // greet.call(user,"MHKS")S
+// greet.apply(user, [,"","MHK"])
+    </script> -->
+    
+    <script>
+   const producttype = {
+    getLabe(){
+        return`${this.name} - ${this.price}`;
+
+
+    }
+   }  
+   const phone = Object.create(producttype); 
+phone.id = 1;
+phone.name = "iphone 17";
+phone.price = 82900;
+
+   const car = Object.create(producttype);   
+    car.id = 2;
+    car.name = "BMW";
+    car.price = 8290000;
+    console.log("PRODUCT",phone.getLabe());
+    // console.log("PRODUCT",car.getLabe());
+    console.log("Property checking", phone.hasOwnProperty('name'));
+    
+
+    const cartManager = {
+        cart: JSON.parse(localStorage.getItem('shoppingCart')|| "[]"),
+        addItem(product){
+            
+         if(this.cart.some(item => item.id === product.id)){
+            console.log(`Product ${product.name} already in cart`);
+            return;
+         }
+            this.cart.push({
+                id:product.id,
+            name:product.name,
+        price:product.price  
+        
+        
+        
+        })
+        localStorage.setItem('shoppingCart', JSON.stringify(this.cart))
+        console.log(`Added = ${product.name}`);
+      
+        },
+          getTotal(){
+            return this.cart.reduce((sum,item)=> sum + item.price,0)
+        
+        },
+        showCart(){
+            console.log("Cart Items");
+            this.cart.forEach((item)=>{
+                console.log(`${item.name} - ${item.price}`);
+            });
+            console.log(`Total: ${this.getTotal()}`);
+        }
+
+
+    }
+    cartManager.addItem(phone);
+    cartManager.addItem(car);
+    cartManager.showCart();
+    </script>
+</body>
+</html>

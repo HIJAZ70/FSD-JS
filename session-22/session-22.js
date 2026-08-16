@@ -77,7 +77,6 @@ if (!resp.ok){
 }
 const savedFeedback = await resp.json();
 console.log('res=',savedFeedback);
-
 feedResult.innerHTML=`<div>
 <p>Thank your ${nameValue}👍</p>
 </div>`

@@ -79,6 +79,7 @@ password.addEventListener('input', () => {
         const value = password.value.trim();
         const convalue = confirmPassword.value.trim();
         const conpass = confirmPassword.getAttribute("id");
+        
 
         if (convalue.length === value) {
             showError(conpass, "Confirm your password");
