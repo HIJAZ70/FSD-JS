@@ -84,7 +84,7 @@ phone.price = 82900;
    const car = Object.create(producttype);   
     car.id = 2;
     car.name = "BMW";
-    car.price = 8290000;
+    car.price = 829000;
     console.log("PRODUCT",phone.getLabe());
     // console.log("PRODUCT",car.getLabe());
     console.log("Property checking", phone.hasOwnProperty('name'));
@@ -127,6 +127,16 @@ phone.price = 82900;
     cartManager.addItem(phone);
     cartManager.addItem(car);
     cartManager.showCart();
+//  const totalAmount =cartManager.getTotal;
+// fix
+    const totalAmount =cartManager.getTotal.bind(cartManager);  
+    console.log("Total Amount",totalAmount());
+    function applyDiscount(discount,message){
+     const disPrice = this.getTotal()-discount;
+     console.log(`${message} - Total after discount: ${disPrice}`);
+    }
+    // applyDiscount.call(cartManager, 8800300,"Special Discount");
+    applyDiscount.apply(cartManager,[ 8800300,"Special Discount"]);
     </script>
 </body>
 </html>
