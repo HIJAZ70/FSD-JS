@@ -1,1 +1,1 @@
-# FSD-JS
+# FSD-JS-JSX
